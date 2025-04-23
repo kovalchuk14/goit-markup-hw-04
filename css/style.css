@@ -84,8 +84,7 @@ h3 {
     color: #2e2f42;
     font-weight: 500;
     padding: 24px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
@@ -122,12 +121,13 @@ h3 {
 .banner {
     background-color: #2e2f42;
     padding: 188px 0;
-    background-image: linear-gradient(to bottom,
-            rgba(46, 47, 66, 0.7),
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url(../images/photos/people-office\ 1.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    max-width: 1440px;
 
 }
 
@@ -242,6 +242,8 @@ footer .logo {
     justify-content: center;
     align-items: center;
     padding: 24px 0;
+    height: 112px;
+    margin-bottom: 8px
 }
 
 .benefits-icon {}
@@ -323,7 +325,8 @@ header .container .navigation .menu {
     background-color: #FFFFFF;
 }
 
-.team-card:hover .team-link {
+.team-card:hover .team-link,
+.team-card:focus .team-link {
     background-color: #404bbf;
 }
 
@@ -337,14 +340,18 @@ header .container .navigation .menu {
 .team-link-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 24px;
+}
 
+.team-link-container {
+    width: 40px;
+    height: 40px;
 }
 
 .team-link {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
     fill: #fff;
@@ -374,14 +381,13 @@ header .container .navigation .menu {
 }
 
 .page-footer .container .footer-block {
-
     flex-direction: column;
 }
 
 .page-footer .container {
     display: flex;
+    align-items: baseline;
     flex-direction: row;
-    gap: 120px;
 }
 
 .page-footer {
@@ -404,12 +410,11 @@ header .container .navigation .menu {
     display: flex;
     flex-direction: row;
     gap: 16px;
-    margin-top: 16px;
 }
 
 .footer-link {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
     fill: #fff;
@@ -417,6 +422,11 @@ header .container .navigation .menu {
     align-items: center;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-link-container {
+    width: 40px;
+    height: 40px;
 }
 
 .visually-hidden {
@@ -449,6 +459,9 @@ header .container .navigation .menu {
 }
 
 .overlay {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     top: 0;
     left: 0;
     width: 100%;
@@ -478,11 +491,32 @@ header .container .navigation .menu {
     position: absolute;
     background: #404bbf;
     left: 0;
-    bottom: -20px;
+    bottom: -1px;
+    border-radius: 2px;
     width: 100%;
     height: 4px;
 }
 
 .menu li {
     position: relative;
+}
+
+header {
+    box-shadow: 0px 1px 6px 0px #2E2F4214,
+        0px 1px 1px 0px #2E2F4229,
+        0px 2px 1px 0px #2E2F4214;
+}
+
+.team-icon {
+    fill: #f4f4fd;
+}
+
+.footer-block:first-child {
+    margin-right: 120px;
+}
+
+.footer-socials {
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 16px;
 }
