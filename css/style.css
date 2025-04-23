@@ -123,7 +123,7 @@ h3 {
     padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url(../images/photos/people-office\ 1.jpg);
+        url(../images/img-name.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -478,12 +478,14 @@ header .container .navigation .menu {
     transform: translateY(0);
 }
 
-.footer-link:hover {
+.footer-link:hover,
+.footer-link:focus {
     background-color: #31d0aa;
 }
 
 .navigation-link.is-active {
     color: #404bbf;
+    position: relative;
 }
 
 .navigation-link.is-active::after {
@@ -497,9 +499,6 @@ header .container .navigation .menu {
     height: 4px;
 }
 
-.menu li {
-    position: relative;
-}
 
 header {
     box-shadow: 0px 1px 6px 0px #2E2F4214,
@@ -507,7 +506,8 @@ header {
         0px 2px 1px 0px #2E2F4214;
 }
 
-.team-icon {
+.team-icon,
+.footer-icon {
     fill: #f4f4fd;
 }
 
