@@ -317,8 +317,8 @@ header .container .navigation .menu {
     background-color: #FFFFFF;
 }
 
-.team-card:hover .team-link,
-.team-card:focus .team-link {
+.team-link:hover,
+.team-link:focus {
     background-color: #404bbf;
 }
 
